@@ -9,6 +9,12 @@
   แอปจัดการและถ่ายโอนไฟล์ระหว่าง Mac และมือถือ Android (เช่น Samsung Galaxy S25 Ultra) ด้วยดีไซน์แบบ macOS Finder แท้ๆ
 </p>
 
+<p align="center">
+  <a href="https://github.com/blurskyday/tran-droid-mac/raw/main/tranandroi.dmg"><strong>⬇ ดาวน์โหลดตัวติดตั้ง tranandroi.dmg (macOS)</strong></a>
+  &nbsp;•&nbsp;
+  <a href="https://github.com/blurskyday/tran-droid-mac/raw/main/tranandroi-macOS.zip"><strong>⬇ ดาวน์โหลดไฟล์ซิป tranandroi-macOS.zip</strong></a>
+</p>
+
 ---
 
 ## ภาพรวม (Overview)
