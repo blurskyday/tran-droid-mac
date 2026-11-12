@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/blurskyday/tran-droid-mac/raw/main/tranandroi.dmg"><strong>⬇ ดาวน์โหลดตัวติดตั้ง tranandroi.dmg (macOS)</strong></a>
+  <a href="https://github.com/blurskyday/tran-droid-mac/releases/download/v1.0.0/tranandroi.dmg"><strong>⬇ ดาวน์โหลดตัวติดตั้ง tranandroi.dmg (v1.0.0)</strong></a>
   &nbsp;•&nbsp;
-  <a href="https://github.com/blurskyday/tran-droid-mac/raw/main/tranandroi-macOS.zip"><strong>⬇ ดาวน์โหลดไฟล์ซิป tranandroi-macOS.zip</strong></a>
+  <a href="https://github.com/blurskyday/tran-droid-mac/releases/download/v1.0.0/tranandroi-macOS.zip"><strong>⬇ ดาวน์โหลดไฟล์ซิป tranandroi-macOS.zip (v1.0.0)</strong></a>
 </p>
 
 ---
