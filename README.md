@@ -10,9 +10,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/blurskyday/tran-droid-mac/releases/download/v1.0.0/tranandroi.dmg"><strong>⬇ ดาวน์โหลดตัวติดตั้ง tranandroi.dmg (v1.0.0)</strong></a>
+  <a href="https://github.com/blurskyday/tran-droid-mac/releases/download/v1.0.2/tranandroi.dmg"><strong>⬇ ดาวน์โหลดตัวติดตั้ง tranandroi.dmg (v1.0.2)</strong></a>
   &nbsp;•&nbsp;
-  <a href="https://github.com/blurskyday/tran-droid-mac/releases/download/v1.0.0/tranandroi-macOS.zip"><strong>⬇ ดาวน์โหลดไฟล์ซิป tranandroi-macOS.zip (v1.0.0)</strong></a>
+  <a href="https://github.com/blurskyday/tran-droid-mac/releases/download/v1.0.2/tranandroi-macOS.zip"><strong>⬇ ดาวน์โหลดไฟล์ซิป tranandroi-macOS.zip (v1.0.2)</strong></a>
 </p>
 
 ---
@@ -40,6 +40,24 @@
 ### 3. ระบบเชื่อมต่อ USB MTP แบบ Uncached & แก้ปัญหาพอร์ตชนอัตโนมัติ
 * ใช้ `LIBMTP_Open_Raw_Device_Uncached` ทำให้เชื่อมต่อและอ่านรายชื่อไฟล์เฉพาะโฟลเดอร์ที่เปิดอยู่ได้ทันทีในระดับมิลลิวินาที แม้ในมือถือจะมีรูปภาพหลายหมื่นรูป
 * **Auto USB Conflict Resolver** — จัดการหยุดโปรเซส `ptpcamerad` ของ macOS ที่ชอบแย่งพอร์ต USB อัตโนมัติ และตรวจจับหากมีแอปอื่น (เช่น `OpenMTP`, `Android File Transfer`) ล็อกพอร์ต USB อยู่ พร้อมปุ่มสลับการเชื่อมต่อในคลิกเดียว
+
+### 4. ระบบสลับธีมสี (Appearance / Theme Switcher) *(ใหม่ใน v1.0.2)*
+* รองรับการเปลี่ยนธีมสีได้ 3 โหมดจากปุ่มบน Toolbar, แถบ Sidebar ด้านซ้าย หรือเมนู `View > Theme`:
+  * **System (Auto)** — อิงตามโหมดสีของระบบ macOS ณ ตอนนั้นอัตโนมัติ
+  * **Light** — โหมดสว่างสไตล์ Finder คลาสสิก
+  * **Dark** — โหมดมืดเต็มรูปแบบ
+* จดจำค่าธีมที่เลือกไว้อัตโนมัติเมื่อเปิดแอปครั้งถัดไป
+
+---
+
+## ประวัติการอัปเดต (Changelog)
+
+### v1.0.2
+* เพิ่มปุ่มและตัวเลือกสลับธีมสี (**System Auto / Light / Dark**) บน Toolbar, แถบ Sidebar ด้านซ้าย และเมนู `View > Theme`
+* รองรับการเปลี่ยนโทนสีหน้าต่าง macOS (AppKit `NSAppearance` + SwiftUI `ColorScheme`) แบบเรียลไทม์พร้อมบันทึกค่าอัตโนมัติ
+
+### v1.0.0
+* เปิดตัวเวอร์ชันแรก รองรับการเชื่อมต่อ Android MTP ผ่าน `libmtp` พร้อมมุมมองแบบ Finder ทั้ง 4 รูปแบบ (`Icons`, `List`, `Columns`, `Gallery`) และโหมดหน้าต่างคู่ `Mac ↔ Android`
 
 ---
 

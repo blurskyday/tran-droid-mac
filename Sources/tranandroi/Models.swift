@@ -1,5 +1,49 @@
 import Foundation
 import SwiftUI
+import AppKit
+
+enum AppThemeMode: String, CaseIterable, Identifiable {
+    case system = "System"
+    case light = "Light"
+    case dark = "Dark"
+
+    var id: String { rawValue }
+
+    var labelThai: String {
+        switch self {
+        case .system: return "ตามระบบ macOS (Auto)"
+        case .light: return "โหมดสว่าง (Light)"
+        case .dark: return "โหมดมืด (Dark)"
+        }
+    }
+
+    var symbolName: String {
+        switch self {
+        case .system: return "circle.lefthalf.filled"
+        case .light: return "sun.max.fill"
+        case .dark: return "moon.fill"
+        }
+    }
+
+    var colorScheme: ColorScheme? {
+        switch self {
+        case .system: return nil
+        case .light: return .light
+        case .dark: return .dark
+        }
+    }
+
+    func applyToAppKit() {
+        switch self {
+        case .system:
+            NSApp.appearance = nil
+        case .light:
+            NSApp.appearance = NSAppearance(named: .aqua)
+        case .dark:
+            NSApp.appearance = NSAppearance(named: .darkAqua)
+        }
+    }
+}
 
 enum FinderViewMode: String, CaseIterable, Identifiable {
     case icons = "Icons"

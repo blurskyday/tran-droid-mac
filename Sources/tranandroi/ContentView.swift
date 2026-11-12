@@ -227,9 +227,22 @@ struct ContentView: View {
                         Label("ดูรายละเอียด (Inspector)", systemImage: "info.circle")
                     }
                     .help("เปิด/ปิด แถบข้อมูลไฟล์ด้านขวา")
+
+                    Menu {
+                        Picker("ธีมสี (Theme)", selection: $vm.themeMode) {
+                            ForEach(AppThemeMode.allCases) { mode in
+                                Label(mode.labelThai, systemImage: mode.symbolName)
+                                    .tag(mode)
+                            }
+                        }
+                    } label: {
+                        Label("ธีมสี: \(vm.themeMode.labelThai)", systemImage: vm.themeMode.symbolName)
+                    }
+                    .help("เปลี่ยนธีมสี (โหมดสว่าง / โหมดมืด / ตามระบบ macOS)")
                 }
             }
         }
+        .preferredColorScheme(vm.themeMode.colorScheme)
         .sheet(isPresented: $vm.showNewFolderSheet) {
             NewFolderDialogView(vm: vm)
         }
@@ -387,6 +400,17 @@ struct FinderSidebarView: View {
                     .buttonStyle(.plain)
                     .tag("mac-quick-\(folder.name)")
                 }
+            }
+
+            Section("Appearance (ธีมสี)") {
+                Picker("Theme", selection: $vm.themeMode) {
+                    ForEach(AppThemeMode.allCases) { mode in
+                        Text(mode.rawValue).tag(mode)
+                    }
+                }
+                .pickerStyle(.segmented)
+                .labelsHidden()
+                .padding(.vertical, 2)
             }
         }
         .listStyle(.sidebar)

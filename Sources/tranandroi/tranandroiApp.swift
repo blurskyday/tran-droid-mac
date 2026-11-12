@@ -76,6 +76,14 @@ struct tranandroiApp: App {
 
                 Divider()
 
+                Picker("Theme (ธีมสี)", selection: $vm.themeMode) {
+                    ForEach(AppThemeMode.allCases) { mode in
+                        Text(mode.labelThai).tag(mode)
+                    }
+                }
+
+                Divider()
+
                 Button("Refresh / Reconnect USB") {
                     Task {
                         if vm.connectedDevice == nil {

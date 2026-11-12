@@ -22,6 +22,12 @@ final class AppViewModel: ObservableObject {
     @Published var lockedByAppName: String?
 
     // Finder View Settings
+    @Published var themeMode: AppThemeMode = .system {
+        didSet {
+            UserDefaults.standard.set(themeMode.rawValue, forKey: "tranandroi.themeMode")
+            themeMode.applyToAppKit()
+        }
+    }
     @Published var viewMode: FinderViewMode = .icons
     @Published var iconGridSize: Double = 84.0
     @Published var sortField: SortField = .name
@@ -94,6 +100,11 @@ final class AppViewModel: ObservableObject {
     }
 
     init() {
+        if let savedTheme = UserDefaults.standard.string(forKey: "tranandroi.themeMode"),
+           let mode = AppThemeMode(rawValue: savedTheme) {
+            self.themeMode = mode
+            mode.applyToAppKit()
+        }
         loadMacPaneDirectory(url: macPaneURL)
         Task {
             await connectAndroidDevice()
