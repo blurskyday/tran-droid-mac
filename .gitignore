@@ -1,0 +1,11 @@
+# Swift Package Manager build artifacts
+.build/
+.swiftpm/
+
+# macOS Finder metadata
+.DS_Store
+
+# Built app bundle (optional: users can build via ./build_app.sh or download from Releases)
+tranandroi.app/
+Assets/AppIcon.iconset/
+Assets/source_icon.webp
